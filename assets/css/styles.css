@@ -41,7 +41,7 @@ body {
     background-color: #fff;
     display: flex;
     column-gap: 1rem;
-    justify-content: end;
+    /* justify-content: end; */
     align-items: center;
     margin-bottom: 3rem;
     padding: 0.5rem 0.2rem;
@@ -111,7 +111,7 @@ body {
 
 /** Media Queries **/
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
     #logo {
         font-size: 2rem;
     }
@@ -120,6 +120,10 @@ body {
         width: 100vw;
         text-align: center;
         font-size: clamp(0.7rem, 3vw, 1rem);
+    }
+
+    #nav-menu {
+        justify-content: center;
     }
 
     #main {
@@ -155,6 +159,10 @@ body {
     #logo {
         font-size: 3rem;
     }
+    #nav-menu {
+        justify-content: end;
+    }
+
     #artigos {
         /* align-items: end; */
         display: grid;
@@ -166,10 +174,6 @@ body {
     }
 
     .artigo {
-        /* max-width: 100%; */
-        /* margin: 0 1rem; */
-        /* max-width: 45%; */
-        /* margin-left: 25%; */
         height: auto;
         width: 100%;
         margin: 0;
@@ -202,6 +206,10 @@ body {
     margin-bottom: 3rem;
 }
 
+/* .titulo {
+    text-align: justify;
+} */
+
 .lista-artigo {
     list-style: none;
 }
@@ -221,4 +229,56 @@ body {
     height: 1.5rem;
     background: url("/assets/img/pata.svg") no-repeat center;
     background-size: contain;
+}
+
+#sobre-nos {
+    background-color: #fff;
+    border-radius: 1rem;
+}
+
+#card-dir {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    padding: 1rem;
+    line-height: 1.7;
+    & h1 {
+        font-size: 2rem;
+        color: #1e0027;
+    }
+}
+
+@media (max-width: 992px) {
+    #sobre-nos {
+        margin: 1rem;
+    }
+    #card-dir {
+        padding: 1.5rem;
+    }
+}
+
+@media (min-width: 993px) {
+    #sobre-nos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        width: 100%;
+        max-width: 75vw;
+        margin: 0 auto;
+    }
+}
+
+#card-esq {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 0 0.5rem 0;
+}
+
+#card-esq img {
+    /* max-width: 100%; */
+    height: auto;
+    margin: 1rem 1rem 0.2rem 1rem;
+    border-radius: 0.5rem;
 }
